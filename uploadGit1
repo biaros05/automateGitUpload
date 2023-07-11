@@ -9,12 +9,13 @@ ls
 echo "moving files to new repository: "
 cp ../*.java ./
 
-new_directory=$(pwd | cut -c 4-)
-git config --global --add safe.directory $new_directory
+#the following commented code were due to errors of unsafe directory. the script should be able to work without them! the first is for windows drives (pwd=/c/...):
+#new_directory=$(pwd | cut -c 4-)
+#git config --global --add safe.directory $new_directory
+
 rm -f .git/info/exclude
 
 #check git status and add files
-ls
 git status .
 git add .
 git status .
