@@ -2,7 +2,11 @@
 This script was created by me to automate git uploads on Windows OS!
 
 ## The script
-This script was created to automate uploads to gitlab through the command line. In order to further automate your tasks, i recommend adding an alias to your ~/.bashrc file as follows (the following was done on a Windows OS):
+This script was created to automate uploads to gitlab through the command line. In order to use this script, go to the folder that contains the files you want to upload, and open the terminal from there. In order to begin, type:
+```
+bash [PATH]/uploadGit1
+```
+In order to further automate your tasks, i recommend adding an alias to your ~/.bashrc file as follows (the following was done on a Windows OS):
 ```
 vi ~/.bashrc
 alias gitlab='bash [PATH]/uploadGit1'
