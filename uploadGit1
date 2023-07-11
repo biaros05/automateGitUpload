@@ -1,0 +1,26 @@
+
+read -p "enter your https  cloning link: " link
+git clone $link
+
+#prepare repository for cloning
+read -p "enter your repository name: " repository
+cd $repository/
+ls
+echo "moving files to new repository: "
+cp ../*.java ./
+
+new_directory=$(pwd | cut -c 4-)
+git config --global --add safe.directory $new_directory
+rm -f .git/info/exclude
+
+#check git status and add files
+ls
+git status .
+git add .
+git status .
+
+#commit changes, push and pull
+read -p "enter commit message: " message
+git commit -m "$message"
+git pull origin main
+git push origin main
